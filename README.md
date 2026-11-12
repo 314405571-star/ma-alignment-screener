@@ -117,7 +117,7 @@ defects that all fail quietly.
 |---|---|---|---|
 | 1 | Strict `slope5 > slope10 > …` | A linear trend has equal slopes and is rejected; with decimal prices, float noise decides the outcome | Accept equal slopes within a price-scaled tolerance |
 | 2 | Volume baseline includes today | `v > (v + sum(prev4)) / 5` collapses to `v > mean(prev4)` — a +1% day "expands" | Baseline is the prior N days; ratio defaults to 1.5× |
-| 3 | `adjustflag="3"` (unadjusted) | MA60 and the 10-day return cross ex-dividend/split dates; a clean trend looks broken | Forward-adjusted prices (`adjustflag="2"`) |
+| 3 | `adjustflag="3"` (unadjusted) | MA60 is broken across ex-dates, and the 10-day return is distorted — a clean trend is rejected, or an extended one passes | Forward-adjusted prices (`adjustflag="2"`) |
 | 4 | Fixed `checkpoint.csv`, no date in the key | Next day's run fetches nothing, prints yesterday's list under today's filename | Date-scoped cache files + row-level date check |
 | 5 | Scoring replaces the AND | A sideways stock scores 30/50 and enters the list | `select()` requires all five; the score only ranks |
 
