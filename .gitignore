@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+*.log
+.venv/
+.idea/
+.DS_Store
+
+# run artefacts
+output/
+cache/
+checkpoint.csv
+processed_codes.csv
+stock_pool.csv

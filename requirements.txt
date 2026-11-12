@@ -1,0 +1,6 @@
+# The screen itself (src/alignment.py, src/cache.py) is pure standard library.
+# These are for the live adapter, the demo figure, and the progress bar.
+baostock>=0.8.9
+func-timeout>=4.3.5
+matplotlib>=3.8
+tqdm>=4.66
